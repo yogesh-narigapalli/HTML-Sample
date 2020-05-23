@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Document</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-3">
+        <h2>Concept Title</h2>
+    </div>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-3">
+                <h5>Owner Name :</h5>
+            </div>
+            <div class="col-3">
+                <h5>Creation Date :</h5>
+            </div>
+            <div class="col-3">
+                <h5><label>Status :
+                    <select>
+                        <option>Select an option</option>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+
+                </label>
+            </h5>
+            </div>
+            <div class="col-3">
+                <h5><label>Phase :
+                    <select>
+                        <option>Select an option</option>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+
+                </label>
+            </h5>
+               
+            </div>
+
+        </div>
+        
+
+    </div>
+
+    <div class="container">
+        <div class="no">
+            <button class="tablink" onclick="openPage('Home', this, 'black')">Overview</button>
+<button class="tablink" onclick="openPage('News', this, 'black')" >Deliverables</button>
+<button class="tablink" onclick="openPage('team', this, 'black')" id="defaultOpen">Team</button>
+<button class="tablink" onclick="openPage('About', this, 'black')">Feedback</button>
+<button class="tablink" onclick="openPage('About', this, 'black')">History</button>
+
+        </div>
+    
+
+<div id="Home" class="tabcontent">
+  
+</div>
+
+<div id="News" class="tabcontent">
+  
+</div>
+
+<div id="team" class="tabcontent styl">
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-6">
+                <h3>Add person to your team</h3>
+    <div class="container mt-3">
+        <label> Select :
+            <select>
+                <option>Click to select a person</option>
+                <option>Person 2</option>
+                <option>Person 3</option>
+            </select> as 
+            <select>
+                <option>Select role</option>
+                <option>Person 2</option>
+                <option>Person 3</option>
+            </select>
+
+        </label>
+        <div class="mt-3">
+            <button class="btn btn-primary">Save</button>
+ <button class="btn btn-primary">Cancel</button>
+
+        </div>
+ 
+
+    </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-5 end">
+                <div class="mt-2 cent" >
+                    <label>Find 
+                        <input type="text">
+
+                    </label>
+                </div>
+                <div class="mt-2 cent">
+                    <label>in
+                        <select>
+                            <option>People</option>
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+
+                    </label>
+                </div>
+                <div class="endy">
+                    <ul>
+                        <li>Peter</li>
+                        <li>Cary</li>
+                        <li>Ton</li>
+                        <li>Dany</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="btn btn-primary mt-5">Assign</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+</div>
+
+<div id="About" class="tabcontent">
+    
+  </div>
+  
+<div id="History" class="tabcontent">
+    
+  </div>
+
+    </div>
+    <script>
+        function openPage(pageName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+</body>
+</html>
